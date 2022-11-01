@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% block title %}
+Django Babu
+{% endblock title %}
+{% block content %}
+
+<style type="text/css">
+.img{
+   width: 100px;
+}   
+</style>
+
+<div class="container masthead">
+<a href="/"><img class="img" src="/static/logo/db logo.svg" alt="" title="" />   
+<h1 itemprop="name" content="Simple is Better Than Complex">
+  <a href="/" class="logo">
+    <span style="color: #0C4B33">django babu</span>
+  </a>
+</h1>
+<h2 class="jumbotron-heading"><span id="typed" style="color: #44B78B"></span></h2>
+
+</div>
+<style>
+.pagination li a,
+.pagination li span {
+  display: inline-block;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 15px;
+}
+</style>
+<main>
+   <div class="container">
+      <div class="row">
+         <div class="eight columns content">
+            <div class="card post-summary" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+               <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                  <meta itemprop="name" content="djangobabu" />
+                  <meta itemprop="url" content="https://djangobabu.com" />
+                  <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+                     <meta itemprop="url" content="https://www.djangobabu.com/img/gplus_logo.png" />
+                     <meta itemprop="height" content="60" />
+                     <meta itemprop="width" content="600" />
+                  </div>
+               </div>
+               
+               <h5 class="post-category">article</h5>
+               <hr class="dashed" />
+               {% for post in  Posts %}
+               <h3 class="post-title">
+                  <a href="/{{post.slug}}"
+                     itemprop="url mainEntityOfPage">
+                  <span itemprop="headline name">{{post.title}}</span>
+                  </a>
+               </h3>
+               <ul class="post-meta">
+                  <li>
+                     <i class="fa fa-calendar"></i>
+                     <time itemprop="datePublished" content="2021-07-08T17:30:00+03:00">{{post.created_on}}</time>
+                     <time itemprop="dateModified" content="2021-07-08T17:30:00+03:00"></time>
+                  </li>
+                  <li>
+                     <i class="fa fa-user"></i>
+                     <a href="/about/" rel="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                     <span itemprop="name">{{post.author}}</span>
+                     </a>
+                  </li>
+                  <li>
+                     <i class="fa fa-comments"></i>
+                     <a href="/{{post.slug}}#disqus_thread"
+                       ><span class="disqus-comment-count" data-disqus-identifier="article_1_identifier"></span>
+                     comments
+                     </a>
+                  </li>
+                  <li>
+                     <i class="fa fa-eye"></i>
+                     <span class="ga-page-views"
+                        data-ga-identifier="{{post.slug}}">{{post.views}}</span>
+                     views
+                  </li>
+               </ul>
+               <a href="/{{post.slug}}"
+                  title="{{post.title}}">
+               <img src="{{post.banner.url}}" alt="{{post.title}}" class="featured-image"
+                  itemprop="image" />
+               </a>
+               <div itemprop="description">
+                  <p style="word-break: break-all;">
+                     {{post.content|safe|truncatewords:"50"}}
+                  </p>
+               </div>
+               <p class="post-read-more">
+                  <a href="/{{post.slug}}">Read more</a>
+               </p>
+               <hr class="dashed" />
+               <div class="row">
+                  <div class="five columns post-tags" itemprop="keywords" >
+                     {% for tag in post.tags.all %}
+                     <a href="{% url 'tagged' tag.slug %}"><span class="tag">#{{tag}}</span></a>
+                     {% endfor %}
+                  </div>
+                  <!-- <div class="seven columns post-share">
+                     <div class="social">
+                  
+                        <a href="https://twitter.com/intent/tweet?text={{post.title}}"
+                           rel="nofollow" target="_blank" title="Share on Twitter">
+                        <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?app_id=1645747765697865&amp;u=https://sibt.co/36l8PND"
+                           rel="nofollow" target="_blank" title="Share on Facebook">
+                        <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://sibt.co/3hpOigV&amp;title={{post.slug}}&amp;source=https://www.djangobabu.com"
+                           rel="nofollow" target="_blank" title="Share on LinkedIn">
+                        <i class="fa fa-linkedin"></i>
+                        </a>
+                     </div>
+                  </div> -->
+               </div>
+               <hr class="dashed" />
+               {% endfor %}
+            </div>
+            <ul class="pagination" >
+                
+               <li>
+                  {% if is_paginated %}
+                  
+                     {% if page_obj.has_previous %}
+                     <li>
+                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#44B78B;">Previous</a></span>
+                     </li>
+                     {% endif %}
+                     <li>
+                        
+                        <span class="page_number"><a style="color:#44B78B;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
+                      </li>
+                     {% if page_obj.has_next %}
+                     <li>
+                        <span class="page_number"><a style="color:#44B78B;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
+                     </li>
+                     {% endif %}
+                  {% endif %}  
+               </li>
+            </ul>
+                
+         </div>
+         {% block sidebar %} 
+         {% include 'home/sidebar.html' %}
+         {% endblock sidebar%}
+      </div>
+   </div>
+   
+</main>
+ <script>
+    window.onload = function () {
+        console.log("loaded")
+        var typed = new Typed('#typed', {
+            strings: ["Welcome to Django Babu ", "Stories about", "Python", "Django", "Poetry", "Docker","Apache HTTP Server","", "  Web Development :)"],
+            backSpeed: 15,
+            smartBackspace: true,
+            backDelay: 1200,
+            startDelay: 1000,
+            typeSpeed: 25,
+            loop: true,
+        });
+    };
+</script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-60726752-3');
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js" async defer></script>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% block footer %}
+<footer>
+  <div class="container">
+    <ul>
+      <li>© 2019-2021 django babu</li>
+
+      <li>//</li>
+      <li><a href="#" rel="author">about</a></li>
+      <li><a href="{% url "contact" %}">contact</a></li>
+      <li><a href="{% url 'articles' %}">Articles</a></li>
+      <!-- <li><a href="cookies/index.html">cookies</a></li> -->
+      <!-- <li><a href="privacy/index.html">privacy policy</a></li> -->
+    </ul>
+  </div>
+</footer>
+{% endblock footer %}

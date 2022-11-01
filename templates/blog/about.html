@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="ten offset-by-one columns content post">
+        <div class="card popular-posts">
+          <div class="row">
+            <div class="four columns">
+                <a href="#">
+                  <center>
+                <img src="/static/img/ds.png" 
+                alt="" title="" style="width:67%;"></center>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illo totam illum quae reiciendis fuga ex sed maxime iure deserunt veniam fugit, alias deleniti et quisquam ipsam odit voluptate explicabo officiis vel, rem temporibus tempore. Culpa perferendis quidem sint nostrum saepe?</p>
+                <input value="PYTHON-DJANGO DEVLOPER " class="btn btn-primary rounded-0 py-2 px-4">
+                
+              </a>
+            </div>
+            <div class="four columns">
+                <a href="#">
+                <img src="/static/img/deep.png" 
+                alt="" title="" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illo totam illum quae reiciendis fuga ex sed maxime iure deserunt veniam fugit, alias deleniti et quisquam ipsam odit voluptate explicabo officiis vel, rem temporibus tempore. Culpa perferendis quidem sint nostrum saepe?</p>
+                <input  value="Python-Django Devloper " class="btn btn-primary rounded-0 py-2 px-4">
+                
+              </a>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</main>
+  <style>
+  .popular-posts .row {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .popular-posts .four.columns {
+    width: 100%;
+  }
+
+  .popular-posts .row {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card.popular-posts input {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+ @media (min-width: 50px) and (max-width: 767px)  {
+      .popular-posts .row{
+        display: block !important;
+      }
+
+      footer ul li{
+        margin: 0;
+      }
+    }
+</style>
+{% endblock content %}

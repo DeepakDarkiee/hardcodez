@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% block title %} {{object.title}} {% endblock %}
+
+
+{% block meta %}
+{% endblock meta %}
+
+{% block post_meta %}
+<link rel="canonical" href="https://djangobabu.com/{{object.slug}}">
+<meta name="keywords" content="{% for tag in object.tags.all %} {{tag}}, {% endfor %}">
+<meta name="author" content="Deepak Patidar">
+<meta name="description" property="og:description" content="{{object.description|safe}}">
+<meta name="language" content="English">
+
+<meta property="og:site_name" content="Django Babu" />
+<meta property="og:url" content="https://djangobabu.com/{{object.slug}}" />
+<meta property="og:title" content="{{object.title}}" />
+<meta property="og:image" content="https://djangobabu.com/{{object.banner.url}}" />
+<meta property="og:image:alt" content="{{object.title}}" />
+<meta property="article:published_time" content="{{object.created_on}}">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="{{object.description|safe}}" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@BabuDjango">
+<meta name="twitter:creator" content="deepak patidar">
+<meta name="twitter:title" content="{{object.title}}">
+<meta name="twitter:description" content="{{object.description}}">
+<meta name="twitter:image" content="https://djangobabu.com/{{object.banner.url}}" alt="{{object.title}}">
+<meta property="og:type" content="article">
+{% endblock post_meta %}
+
+{% block content %}
+
+<div id="top" style="visibility: hidden"></div>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="ten offset-by-one columns content post">
+        <div class="card">
+          <h5 class="post-category">article</h5>
+          <hr class="dashed" />
+
+          <h1 class="post-title">
+            {{object.title}}
+          </h1>
+          <ul class="post-meta">
+            <li><i class="fa fa-calendar"></i> {{object.created_on}}</li>
+            <li>
+              <i class="fa fa-user"></i>
+              <a href="/about/" rel="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{object.author}}</span>
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-comments"></i>
+              <a href="/{{object.slug}}#disqus_thread">
+                <span class="disqus-comment-count" data-disqus-identifier="article_1_identifier"></span>
+                comments
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-eye"></i>
+              <span class="ga-page-views" data-ga-identifier="{{object.slug}}">{{object.views}}</span>
+              views
+            </li>
+          </ul>
+
+          <div class="post-featured-image">
+            <img src="{{object.banner.url}}" alt="{{object.title}}"
+              class="featured-image" />
+
+          </div>
+
+          <article>
+            <p>{{object.content|safe}}</p>
+          </article>
+
+          <hr />
+          <div class="popular-posts related-posts">
+            <h4>Related Posts</h4>
+            <div class="row">
+
+              {% for post in object.tags.similar_objects|slice:"0:6"  %}
+              <div class="four columns">
+                <a href="/{{post.slug}}">
+                  <img src="{{post.banner.url}}" alt="{{post.banner}}" title="{{post.title}}" />
+                  {{post.title}}
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <hr class="dashed" />
+          <div class="row">
+            <div class="six columns post-tags" style="padding-top: 4px">
+
+              {% for tag in object.tags.all %}
+
+              <a href="{% url 'tagged' tag.slug %}"><span class="tag">#{{tag}}</span></a>
+
+              {% endfor %}
+
+
+            </div>
+            <!-- <div class="six columns post-share">
+              <div class="social">
+                Share this post
+                <a href="http://vk.com/share.php?url=https://sibt.co/3hTSeWv" rel="nofollow" target="_blank"
+                  title="Share on VK">
+                  <i class="fa fa-vk"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?text=What%20You%20Should%20Know%20About%20The%20Django%20User%20Model&amp;url=https://sibt.co/2T05xw8&amp;via=vitorfs&amp;related=vitorfs"
+                  rel="nofollow" target="_blank" title="Share on Twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?app_id=1645747765697865&amp;u=https://sibt.co/36l8PND"
+                  rel="nofollow" target="_blank" title="Share on Facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://sibt.co/3hpOigV&amp;title=What%20You%20Should%20Know%20About%20The%20Django%20User%20Model&amp;summary=The%20goal%20of%20this%20article%20is%20to%20discuss%20the%20caveats%20of%20the%20default%20Django%20user%20model%20implementation%20and%20also%20to%20give%20you%20some%20advice%20on%20how%20to%20address%20them.%20It%20is%20important%20to%20know%20the%20limitations%20o...&amp;source=https://simpleisbetterthancomplex.com"
+                  rel="nofollow" target="_blank" title="Share on LinkedIn">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        {% block comment %}
+        <div id="comments">
+          <div id="disqus_thread"></div>
+          <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+              var d = document,
+                s = d.createElement('script');
+              s.src = 'https://djangobabu.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+              Disqus.</a></noscript>
+          <script id="dsq-count-scr" src="//djangobabu.disqus.com/count.js" async></script>
+
+        </div>
+        {% endblock comment %}
+
+
+        <div class="card popular-posts">
+          <h4>Popular Posts</h4>
+          <div class="row">
+            {% for post in popular_post %}
+            <div class="four columns">
+
+              <a href="/{{post.slug}}">
+                <img src="{{post.banner.url}}" alt="{{post.banner}}" title="{{post.title}}" />
+                {{post.title}}
+              </a>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+<style>
+  .related-posts .row {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .related-posts .four.columns {
+    width: 100%;
+  }
+</style>
+
+
+
+
+</body>
+
+
+</html>
+
+
+{% endblock content %}

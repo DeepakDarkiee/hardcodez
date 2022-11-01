@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}
+Search
+{% endblock title %}
+{% block content %}
+<style>
+ 
+.page-title {
+  margin-bottom: 2rem;
+}    
+.card {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0 / 5%);
+    margin-bottom: 4rem;
+}
+</style>
+<main>
+   <div class="container">
+      <div class="row">
+         <div class="eight columns content">
+            <div class="page card" >
+               <h4  class="page-title">Search</h4 >
+               <hr  class="sm" >
+               
+               <form action="{% url 'search-article' %}" method="get" id="site_search">
+                  <div class="row">
+                     <div class="nine columns">
+                        <input  type="text" name="q" id="search_box" class="u-full-width"  placeholder="Search for articles…">
+                     </div>
+                     <div class="three columns">
+                        <button type="submit"  class="button-primary u-full-width"><span class="fa fa-search"></span></button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            {% for obj in object_list %}  
+
+            <li class="post-title" style="text-align: left; color:#44B78B">
+         
+                  <a href="/{{obj.slug}}"
+                     itemprop="url mainEntityOfPage">
+                  <span itemprop="headline name">{{obj.title}}</span>
+                  </a>
+         
+            </li>
+
+            {% endfor %}
+         </div>
+         {% block sidebar %} 
+         {% include 'home/sidebar.html' %}
+         {% endblock sidebar%}
+      </div>
+   </div>
+</main>
+{% endblock content %}

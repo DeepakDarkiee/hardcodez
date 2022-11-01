@@ -1,0 +1,35 @@
+{% block sidebar %}
+<div class="four columns sidebar">
+  <div class="widget card subscribe">
+    <h4>Subscribe now</h4>
+    <h6>Subscribe to our mailing list to receive updates from the blog</h6>
+    <form action="{% url 'subscribe' %}" method="post" >
+      {% csrf_token %}
+      <label for="id_email">Email Address</label>
+      <input type="email" name="email" class="u-full-width" id="id_email" placeholder="your@email.com" required/>
+      <input type="submit" value="Subscribe" name="subscribe" class="button-primary" />
+    </form>
+  </div>
+
+  <div class="widget card">
+    <h4>recent posts</h4>
+    <ul class="popular-posts">
+      
+      {% for post in Posts %}
+      <li>
+        <a href="/{{post.slug}}">
+          {{post.title}}
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+  <div class="widget card">
+    <h4>Latest Comments</h4>
+   <div id="RecentComments" class="dsq-widget">
+     
+     <script type="text/javascript" src="https://djangobabu.disqus.com/combination_widget.js?num_items=10&hide_mods=0&color=green&default_tab=recent&excerpt_length=70"></script>
+</div>
+</div>
+{% endblock sidebar %}

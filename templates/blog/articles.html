@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}
+Articles
+{% endblock title %}
+
+{% block content %}
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="ten offset-by-one columns content post">
+        <div class="card popular-posts">
+          <h4>Recent Articles</h4>
+          <div class="row">
+             {% for post in Posts %}
+            <div class="col-md-4 col-sm-12">
+              <a href="/{{post.slug}}">
+                <img
+                  src="{{post.banner.url}}"
+                  alt="{{post.banner}}"
+                  title="{{post.title}}"
+                />
+                {{post.title}}
+              </a>
+            </div>
+            {% endfor %}
+          </div>  
+        </div>
+        <ul class="pagination" >
+                
+               <li>
+                  {% if is_paginated %}
+                  
+                     {% if page_obj.has_previous %}
+                     <li>
+                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#44B78B;">Previous</a></span>
+                     </li>
+                     {% endif %}
+                     <li>
+                        
+                        <span class="page_number"><a style="color:#44B78B;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
+                      </li>
+                     {% if page_obj.has_next %}
+                     <li>
+                        <span class="page_number"><a style="color:#44B78B;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
+                     </li>
+                     {% endif %}
+                     
+               
+                  {% endif %}  
+               </li>
+            </ul>
+      </div>
+    </div>
+  </div>
+  
+</main>
+  <style>
+    @media (min-width: 50px) and (max-width: 767px)  {
+      .popular-posts .row{
+        display: block !important;
+      }
+    }
+  .popular-posts .row {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .popular-posts .four.columns {
+    width: 100%;
+  }
+</style>
+{% endblock content %}
