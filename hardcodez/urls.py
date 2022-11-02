@@ -21,6 +21,8 @@ from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
 from django.views.generic.base import TemplateView
 from django_otp.admin import OTPAdminSite
+#my change
+
 
 
 def trigger_error(request):
@@ -45,6 +47,7 @@ urlpatterns = [
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
+   
     # path("taggit_autosuggest",include("taggit_autosuggest.urls"))
 ]
 

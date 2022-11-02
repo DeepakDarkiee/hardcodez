@@ -12,9 +12,14 @@ from django.urls import reverse_lazy
 from django.views import View, generic
 from django.views.generic import TemplateView
 from django.views.generic.edit import UpdateView
+from django.core.mail import send_mail
+from django.conf import settings
 
 from home.models import Contact, Subscribe
 from home.tasks import contact_mail_tasks,subscription_mail_tasks
+
+from django.http import HttpResponse
+
 
 
 
@@ -33,6 +38,7 @@ class Subscription(View):
             subscription_mail_tasks.delay(email)
             messages.success(request, "Email received. thank You! ")
             return redirect("/")
+
 
 
 class ContactView(View):
@@ -67,3 +73,4 @@ def handler500(request, *args, **argv):
     response = render(request, "505.html")
     response.status_code = 500
     return response
+
