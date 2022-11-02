@@ -10,7 +10,10 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
 import os
 
 from django.core.asgi import get_asgi_application
+from decouple import config
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hardcodez.settings')
+ENV = config('ENV')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'hardcodez.settings{ENV}')
 
 application = get_asgi_application()
