@@ -5,13 +5,13 @@ from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
 # this is also used in manage.py
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djangobabu.settings.production')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hardcodez.settings.production')
 
 
 ## Get the base REDIS URL, default to redis' default
 BASE_REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')
 
-app = Celery('djangobabu')
+app = Celery('hardcodez')
 
 # Using a string here means the worker don't have to serialize
 # the configuration object to child processes.
