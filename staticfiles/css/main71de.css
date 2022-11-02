@@ -1633,7 +1633,7 @@ blockquote ul:last-child {
 }
 
 .tag {
-  background-color: #44B78B;
+  background-color: #3776ab;
   padding: 4px 8px;
   color: #fff;
   font-size: 1.4rem;
@@ -2690,7 +2690,7 @@ Syntax Highlight
 /* Name.Tag */
 
 .highlight .nv {
-  color: #008080
+  color: #3776ab
 }
 
 
