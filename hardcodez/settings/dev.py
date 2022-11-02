@@ -12,7 +12,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "djangobabu_db",
         "USER": "postgres",
-        "PASSWORD": "root",
+        "PASSWORD": "new_password",
         "HOST": "localhost",
         "PORT": "5432",
     }
