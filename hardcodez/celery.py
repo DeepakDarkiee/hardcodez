@@ -2,10 +2,13 @@ from __future__ import absolute_import, unicode_literals # for python2
 
 import os
 from celery import Celery
+from decouple import config
+
+ENV = config('ENV')
 
 # set the default Django settings module for the 'celery' program.
 # this is also used in manage.py
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hardcodez.settings.production')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'hardcodez.settings.{ENV}')
 
 
 ## Get the base REDIS URL, default to redis' default
