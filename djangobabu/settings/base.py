@@ -180,8 +180,8 @@ EMAIL_HOST = "smtp.gmail.com"
 # EMAIL_USE_SSL = True
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "site.djangobabu@gmail.com"
-EMAIL_HOST_PASSWORD = "Djangobabu@1998@"
+EMAIL_HOST_USER = "noreply.hardcodez@gmail.com"
+EMAIL_HOST_PASSWORD = "aukhbsznhmcfvrxj"
 
 CELERY_BROKER_URL = "redis://localhost:6379/"
 # CELERY_RESULT_BACKEND =  'amqp://localhost'

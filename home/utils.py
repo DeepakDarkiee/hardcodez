@@ -19,6 +19,7 @@ def contact_mail(recipient):
         return "OK"
 
 
+
 def subscription_mail(recipient):
     mail_template = Configuration.get_mail_template("subscribe_mail")
     mail_template.to = recipient
@@ -34,6 +35,15 @@ def post_mail(recipients,title,slug,banner):
                             "banner":banner
                             })
     return "OK"
+
+
+
+
+
+
+
+
+
 
 
 # # Mailchimp Settings

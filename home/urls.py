@@ -1,6 +1,8 @@
 from blog.views import *
 from django.urls import path
 
+from home import views
+
 from home.views import *
 
 urlpatterns = [
@@ -10,4 +12,6 @@ urlpatterns = [
     path("subscribe/", Subscription.as_view(), name="subscribe"),
     path("contact/", ContactView.as_view(), name="contact"),
     path("google_search/", GoogleSearchView.as_view(), name="google_search"),
+
+
 ]
