@@ -66,6 +66,7 @@ nav,
 section,
 summary {
   display: block;
+  color: #3776ab;
 }
 
 
@@ -740,7 +741,7 @@ body {
   Helvetica,
   Arial,
   sans-serif; */
-  color: #0C4B33;
+  color: #3776ab;
 }
 
 
@@ -762,7 +763,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
-  color: #0C4B33;
+  color: #3776ab;
 }
 
 h1 {
@@ -839,11 +840,11 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 a {
-  color: #44B78B;
+  color: #3776ab;
 }
 
 a:hover {
-  color: #0C4B33;
+  color: #ffdf76;
 }
 
 
@@ -894,9 +895,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #44B78B;
-  border-color: #0C4B33;
+  color: black;
+  background-color: #ffdf76;
+  border-color: #ffdf76;
 }
 
 .button.button-primary:hover,
@@ -910,8 +911,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #44B78B;
-  border-color: #0C4B33;
+  background-color: #2b5b84;
+  border-color: #2b5b84;
   zoom: 1;
 }
 
@@ -1198,7 +1199,7 @@ body {
 
 header {
   position: fixed;
-  background-color: #0C4B33;
+  background-color: #2b5b84;
   left: 0;
   top: 0;
   width: 100%;
@@ -1325,7 +1326,7 @@ header ul.menu li a:hover {
 }
 
 .logo span {
-  color: #44B78B;
+  color: #ffd343;
 }
 
 
@@ -1334,7 +1335,7 @@ header ul.menu li a:hover {
 } */
 
 footer {
-  background-color: #44B78B;
+  background-color: #2b5b84;
   padding: 15px 0;
 }
 
@@ -1490,7 +1491,7 @@ p {
 .content .post-summary .post-title a:active,
 .content .post-summary .post-meta li a:hover,
 .content .post-summary .post-meta li a:active {
-  color: #44B78B;
+  color: #2b5b84;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1634,7 +1635,7 @@ blockquote ul:last-child {
 }
 
 .tag {
-  background-color: #44B78B;
+  background-color: #3776ab;
   padding: 4px 8px;
   color: #fff;
   font-size: 1.4rem;
@@ -1921,7 +1922,7 @@ pre code {
 
 .post .card.subscribe button:hover,
 .post .card.subscribe button:active {
-  background-color: #44B78B;
+  background-color: #2b5b84;
   color: #fff;
   border-color: #000;
 }
@@ -1955,7 +1956,7 @@ pre code {
 }
 
 .pagination li.active span {
-  background-color: #44B78B;
+  background-color: #2b5b84;
   color: #fff;
 }
 
@@ -2258,11 +2259,11 @@ Carbonads
 
 #seriesSideBar ul li a:hover,
 #seriesSideBar ul li a:active {
-  color: #44B78B;
+  color: #3776ab;
 }
 
 #seriesSideBar ul li a.active {
-  color: #44B78B;
+  color: #3776ab;
 }
 
 
@@ -2291,8 +2292,8 @@ nav.platform a.active {
 }
 
 nav.platform a.series-nav {
-  border-color: #14c07b;
-  color: #14c07b;
+  border-color: #3776ab;
+  color: #3776ab;
 }
 
 body article div.platform-mac,
@@ -2376,7 +2377,7 @@ body.platform-linux article span.platform-linux {
 
 .code-view .code-preview {
   padding: 1rem 1.5rem;
-  border: 1px solid #44B78B;
+  border: 1px solid #3776ab;
   border-radius: 4px;
 }
 
