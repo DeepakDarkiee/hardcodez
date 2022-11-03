@@ -1,2 +1,2 @@
-web: gunicorn djangobabu.wsgi --log-file -
-worker: celery -A djangobabu worker -B --loglevel=info
+web: gunicorn hardcodez.wsgi --log-file -
+worker: celery -A hardcodez worker -B --loglevel=info

@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["www.djangobabu.com", "djangobabu.com"]
+ALLOWED_HOSTS = ["www.hardcodez.com", "hardcodez.com"]
 
 
 
@@ -11,7 +11,7 @@ CACHE_MIDDLEWARE_SECONDS = 60   # number of seconds to cache a page for (TTL)
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.db.DatabaseCache",
-        "LOCATION": "djangobabu_cache",
+        "LOCATION": "hardcodez_cache",
     }
 }
 
@@ -19,9 +19,9 @@ CACHES = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "djangobabu_db",
-        "USER": "djangobabu",
-        "PASSWORD": "djangobabu",
+        "NAME": "hardcodez_db",
+        "USER": "hardcodez",
+        "PASSWORD": "hardcodez",
         "HOST": "localhost",
         "PORT": "5432",
     }
