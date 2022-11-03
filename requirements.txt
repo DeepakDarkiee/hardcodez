@@ -55,7 +55,7 @@ kiwisolver==1.4.4
 kombu
 lxml==4.9.1
 mailchimp-marketing==3.0.75
-MarkupSafe==2.1.1
+MarkupSafe
 matplotlib==3.6.1
 mpi4py
 numpy==1.22.4
