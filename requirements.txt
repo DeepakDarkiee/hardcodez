@@ -3,7 +3,11 @@ asgiref
 beat
 beautifulsoup4==4.10.0
 billiard==3.6.4.0
+<<<<<<< HEAD
 celery
+=======
+celery==5.2.2
+>>>>>>> f29ef0c68c8151b56e2cb689200cc8ddf6d73ce5
 certifi==2021.5.30
 charset-normalizer==2.0.4
 click
@@ -40,7 +44,7 @@ et-xmlfile==1.1.0
 gunicorn==20.1.0
 idna==3.2
 Jinja2==3.0.1
-kombu
+kombu==4.6.11
 lxml==4.9.1
 pilkit==2.0
 Pillow==9.0.1

@@ -6,6 +6,10 @@ from celery.schedules import crontab
 from home.models import Subscribe
 from home.utils import subscription_mail, contact_mail,post_mail
 
+from django.core.mail import send_mail
+from djangobabu import settings
+
+
 app = Celery()
 
 
@@ -25,4 +29,11 @@ def post_mail_tasks(title,slug,banner):
     subscribe = Subscribe.objects.all()
     recipient_list = list(subscribe)
     post_mail(recipient_list,title,slug,banner)
+
+
+
+
+
+        
+
 
