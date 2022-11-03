@@ -1,5 +1,5 @@
 amqp==2.6.1
-asgiref==3.4.1
+asgiref
 beat==0.3.0
 beautifulsoup4==4.10.0
 billiard==3.6.4.0
