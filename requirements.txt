@@ -6,7 +6,7 @@ billiard==3.6.4.0
 celery
 certifi==2021.5.30
 charset-normalizer==2.0.4
-click==7.1.2
+click
 click-didyoumean==0.0.3
 click-plugins==1.1.1
 click-repl==0.2.0
