@@ -21,6 +21,8 @@ base_app = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "django.contrib.sitemaps",
+    "dbbackup",
+    "django_crontab",
 ]
 
 my_app = [
@@ -39,6 +41,18 @@ my_app = [
 ]
 
 INSTALLED_APPS = base_app + my_app
+
+#######################################################
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / 'Data_backup'}
+DBBACKUP_POSTGRES_EXTENSION = 'psql'
+
+CRONJOBS = [
+    ('* */23 * * *', 'hardcodez.cron.db_back')
+]
+
+######################################################
 
 MIDDLEWARE = [
     "django.middleware.cache.UpdateCacheMiddleware",
