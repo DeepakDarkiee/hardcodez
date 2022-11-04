@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from djangobabu import settings
+from hardcodez import settings
 from mailchimp_marketing import Client
 from mailchimp_marketing.api_client import ApiClientError
 from django_mail_template.models import Configuration
@@ -17,6 +17,7 @@ def contact_mail(recipient):
         mail_template.to = recipient
         mail_template.send()
         return "OK"
+
 
 
 def subscription_mail(recipient):
@@ -34,6 +35,15 @@ def post_mail(recipients,title,slug,banner):
                             "banner":banner
                             })
     return "OK"
+
+
+
+
+
+
+
+
+
 
 
 # # Mailchimp Settings

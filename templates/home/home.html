@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-Django Babu
+
 {% endblock title %}
 {% block content %}
 
@@ -11,13 +11,13 @@ Django Babu
 </style>
 
 <div class="container masthead">
-<a href="/"><img class="img" src="/static/logo/db logo.svg" alt="" title="" />   
-<h1 itemprop="name" content="Simple is Better Than Complex">
+{% comment %} <a href="/"><img class="img" src="/static/logo/db logo.svg" alt="" title="" />    {% endcomment %}
+<h1 itemprop="name" content="hardcodez">
   <a href="/" class="logo">
-    <span style="color: #0C4B33">django babu</span>
+    <span style="color: #3776ab">HardCodez</span>
   </a>
 </h1>
-<h2 class="jumbotron-heading"><span id="typed" style="color: #44B78B"></span></h2>
+<h2 class="jumbotron-heading"><span id="typed" style="color: #3776ab"></span></h2>
 
 </div>
 <style>
@@ -37,10 +37,10 @@ Django Babu
          <div class="eight columns content">
             <div class="card post-summary" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-                  <meta itemprop="name" content="djangobabu" />
-                  <meta itemprop="url" content="https://djangobabu.com" />
+                  <meta itemprop="name" content="hardcodez" />
+                  <meta itemprop="url" content="https://hardcodez.com" />
                   <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-                     <meta itemprop="url" content="https://www.djangobabu.com/img/gplus_logo.png" />
+                     <meta itemprop="url" content="https://www.hardcodez.com/img/gplus_logo.png" />
                      <meta itemprop="height" content="60" />
                      <meta itemprop="width" content="600" />
                   </div>
@@ -112,7 +112,7 @@ Django Babu
                            rel="nofollow" target="_blank" title="Share on Facebook">
                         <i class="fa fa-facebook"></i>
                         </a>
-                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://sibt.co/3hpOigV&amp;title={{post.slug}}&amp;source=https://www.djangobabu.com"
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://sibt.co/3hpOigV&amp;title={{post.slug}}&amp;source=https://www.hardcodez.com"
                            rel="nofollow" target="_blank" title="Share on LinkedIn">
                         <i class="fa fa-linkedin"></i>
                         </a>
@@ -129,16 +129,16 @@ Django Babu
                   
                      {% if page_obj.has_previous %}
                      <li>
-                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#44B78B;">Previous</a></span>
+                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#3776ab;">Previous</a></span>
                      </li>
                      {% endif %}
                      <li>
                         
-                        <span class="page_number"><a style="color:#44B78B;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
+                        <span class="page_number"><a style="color:#3776ab;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
                       </li>
                      {% if page_obj.has_next %}
                      <li>
-                        <span class="page_number"><a style="color:#44B78B;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
+                        <span class="page_number"><a style="color:   #3776ab;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
                      </li>
                      {% endif %}
                   {% endif %}  
@@ -157,13 +157,14 @@ Django Babu
     window.onload = function () {
         console.log("loaded")
         var typed = new Typed('#typed', {
-            strings: ["Welcome to Django Babu ", "Stories about", "Python", "Django", "Poetry", "Docker","Apache HTTP Server","", "  Web Development :)"],
+            strings: ["Welcome to Hardcodez ", "Stories about", "Python", "Django", "Poetry", "Docker","Apache HTTP Server","", "  Web Development :)"],
             backSpeed: 15,
             smartBackspace: true,
             backDelay: 1200,
             startDelay: 1000,
             typeSpeed: 25,
             loop: true,
+         
         });
     };
 </script>

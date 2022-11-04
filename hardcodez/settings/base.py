@@ -56,7 +56,7 @@ MIDDLEWARE = [
 ]
 
 
-WSGI_APPLICATION = "djangobabu.wsgi.application"
+WSGI_APPLICATION = "hardcodez.wsgi.application"
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
@@ -180,8 +180,8 @@ EMAIL_HOST = "smtp.gmail.com"
 # EMAIL_USE_SSL = True
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "site.djangobabu@gmail.com"
-EMAIL_HOST_PASSWORD = "Djangobabu@1998@"
+EMAIL_HOST_USER = "noreply.hardcodez@gmail.com"
+EMAIL_HOST_PASSWORD = "aukhbsznhmcfvrxj"
 
 CELERY_BROKER_URL = "redis://localhost:6379/"
 # CELERY_RESULT_BACKEND =  'amqp://localhost'
@@ -194,9 +194,9 @@ CELERY_REDIRECT_STDOUTS_LEVEL = False
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "Django Babu",
+    "site_title": "HardCodez",
     # Title on the brand, and login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "Django Babu",
+    "site_header": "HardCodez",
     # Logo to use for your site, must be present in static files, used for brand on top left
     "site_logo": "logo/db logo.svg",
     # CSS classes that are applied to the logo above
@@ -204,9 +204,9 @@ JAZZMIN_SETTINGS = {
     # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
     "site_icon": None,
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the Django Babu",
+    "welcome_sign": "Welcome to the HardCodez",
     # Copyright on the footer
-    "copyright": "www.djangobabu.com",
+    "copyright": "www.hardcodez.com",
     # The model admin to search from the search bar, search bar omitted if excluded
     "search_model": "blog.post",
     # Field name on user model that contains avatar image
@@ -322,4 +322,4 @@ JAZZMIN_UI_TWEAKS = {
     },
 }
 
-ROOT_URLCONF = "djangobabu.urls"
+ROOT_URLCONF = "hardcodez.urls"

@@ -18,7 +18,7 @@
 .hljs-literal,
 .hljs-symbol,
 .hljs-name {
-  color: #44B78B;
+  color: #3776ab;
 }
 
 .hljs-link {
@@ -28,7 +28,7 @@
 
 .hljs-built_in,
 .hljs-type {
-  color: #4EC9B0;
+  color: #3776ab;
 }
 
 .hljs-number,
@@ -107,7 +107,7 @@
 }
 
 .hljs-addition {
-  background-color: #144212;
+  background-color: #3776ab;
   display: inline-block;
   width: 100%;
 }
@@ -117,3 +117,4 @@
   display: inline-block;
   width: 100%;
 }
+
