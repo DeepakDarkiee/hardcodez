@@ -48,3 +48,4 @@ whitenoise
 django_otp
 Pillow
 django-taggit-autosuggest
+gunicorn
