@@ -30,10 +30,6 @@ def post_mail_tasks(title,slug,banner):
     recipient_list = list(subscribe)
     post_mail(recipient_list,title,slug,banner)
 
-
-
-
-
-        
-
-
+# @shared_task(name = "dbbackup")
+# def Data_backup_task(db_back):
+#     crontab(minute = "*")
