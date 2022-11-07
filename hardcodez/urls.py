@@ -36,7 +36,7 @@ sitemaps = {
 
 urlpatterns = [
     path("sentry-debug/", trigger_error),
-    path("admin/", include("admin_honeypot.urls", namespace="admin_honeypot")),
+    # path("admin/", include("admin_honeypot.urls", namespace="admin_honeypot")),
     path("panel/", admin.site.urls),
     path("", include("home.urls")),
     path("", include("blog.urls")),

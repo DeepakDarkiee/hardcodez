@@ -21,8 +21,8 @@ base_app = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "django.contrib.sitemaps",
-    "dbbackup",
-    "django_crontab",
+    # "dbbackup",
+    # "django_crontab",
 ]
 
 my_app = [
@@ -34,7 +34,7 @@ my_app = [
     "django_celery_results",
     "import_export",
     "django_mail_template",
-    "admin_honeypot",
+    # "admin_honeypot",
     "django_otp",
     "django_otp.plugins.otp_totp",
     "django_otp.plugins.otp_static",
@@ -194,8 +194,8 @@ EMAIL_HOST = "smtp.gmail.com"
 # EMAIL_USE_SSL = True
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "noreply.hardcodez@gmail.com"
-EMAIL_HOST_PASSWORD = "aukhbsznhmcfvrxj"
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 
 CELERY_BROKER_URL = "redis://localhost:6379/"
 # CELERY_RESULT_BACKEND =  'amqp://localhost'

@@ -2,8 +2,10 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["www.hardcodez.com", "hardcodez.com"]
+from decouple import config
 
+ALLOWED_HOSTS = ["www.hardcodez.com", "hardcodez.com","*"]
+import dj_database_url
 
 
 CACHE_MIDDLEWARE_ALIAS = "default"  # which cache alias to use
@@ -15,7 +17,7 @@ CACHES = {
     }
 }
 
-
+DEPLOYE = config('DEPLOYE')
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
@@ -26,6 +28,13 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+if DEPLOYE == 'heroku':
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=config('DATABASE_URL')
+        )
+    }
 
 # SECURE_SSL_REDIRECT=True
 SESSION_COOKIE_SECURE=True
@@ -41,8 +50,10 @@ import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
 sentry_sdk.init(
-    dsn="https://d38fc4d8b4a8454094238812a3b74554@o1006823.ingest.sentry.io/5967171",
-    integrations=[DjangoIntegration()],
+    dsn="https://be767489a7fe4fa480a3bc2c6dfb26c7@o4504119221944320.ingest.sentry.io/4504119222796288",
+    integrations=[
+        DjangoIntegration(),
+    ],
 
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
