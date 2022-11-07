@@ -47,3 +47,4 @@ mailchimp_marketing
 whitenoise
 django_otp
 Pillow
+django-taggit-autosuggest
