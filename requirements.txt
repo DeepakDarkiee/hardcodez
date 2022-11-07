@@ -45,3 +45,4 @@ dj_database_url
 sentry-sdk
 mailchimp_marketing
 whitenoise
+django_otp
