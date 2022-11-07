@@ -6,6 +6,7 @@ from django.contrib.messages import constants as messages
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+
 # SECRET_KEY = "django-insecure-vl9!07nu2)o9q-6=%$abywi84=wz2eh4f0e@e@xt83e2qbvn00"
 SECRET_KEY = "aE1so1N8N7k046ymGYQRbhFfgI3-zaowr1k6I1uYFFfLp9SsRh-v_xQUKQLCWNKGCZ-5"
 
@@ -46,10 +47,12 @@ INSTALLED_APPS = base_app + my_app
 
 DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
 DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / 'Data_backup'}
-DBBACKUP_POSTGRES_EXTENSION = 'psql'
+DBBACKUP_FILENAME_TEMPLATE = 'Hardcodez_db.sql'
+
+
 
 CRONJOBS = [
-    ('* */23 * * *', 'hardcodez.cron.db_back')
+    ('*/1 * * * *', 'hardcodez.cron.db_back')
 ]
 
 ######################################################
