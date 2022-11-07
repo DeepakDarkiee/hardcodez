@@ -46,3 +46,4 @@ sentry-sdk
 mailchimp_marketing
 whitenoise
 django_otp
+Pillow
