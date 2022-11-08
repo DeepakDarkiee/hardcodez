@@ -49,3 +49,4 @@ django_otp
 Pillow
 django-taggit-autosuggest
 gunicorn
+redis-server
