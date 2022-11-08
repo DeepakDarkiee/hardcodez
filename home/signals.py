@@ -13,5 +13,5 @@ def send_post_mail(sender, instance, created, **kwargs):
         title=instance.title
         slug=instance.slug
         banner=str(instance.banner)
-        post_mail_tasks.delay(title,slug,banner)
+        post_mail_tasks(title,slug,banner)
         pass

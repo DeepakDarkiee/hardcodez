@@ -35,7 +35,7 @@ class Subscription(View):
             return redirect("/")
         else:
             Subscribe.objects.create(email=email)
-            subscription_mail_tasks.delay(email)
+            subscription_mail_tasks(email)
             messages.success(request, "Email received. thank You! ")
             return redirect("/")
 
@@ -50,7 +50,7 @@ class ContactView(View):
         contact = Contact.objects.create(
             name=name, email=email, subject=subject, message=message
         )
-        contact_mail_tasks.delay(email)
+        contact_mail_tasks(email)
         messages.success(request, "Thank You! For Contacting Us ")  # message
         return HttpResponse("OK")
 
