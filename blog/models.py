@@ -10,6 +10,7 @@ from taggit_autosuggest.managers import TaggableManager
 from taggit.managers import TaggableManager
 from tinymce.models import HTMLField
 
+
 STATUS = ((0, "Draft"), (1, "Publish"))
 
 class Post(models.Model):
