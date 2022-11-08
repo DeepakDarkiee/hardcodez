@@ -52,7 +52,7 @@ DBBACKUP_FILENAME_TEMPLATE = 'Hardcodez_db.sql'
 
 
 CRONJOBS = [
-    ('*/1 * * * *', 'hardcodez.cron.db_back')
+
 ]
 
 ######################################################
