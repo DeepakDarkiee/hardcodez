@@ -55,8 +55,8 @@ if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-if not settings.DEBUG:
-    admin.site.__class__ = OTPAdminSite
+# if not settings.DEBUG:
+#     admin.site.__class__ = OTPAdminSite
 
 handler404 = "home.views.handler404"
 handler500 = "home.views.handler500"
