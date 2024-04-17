@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = False
+DEBUG = True
 
 from decouple import config
 
@@ -17,24 +17,17 @@ CACHES = {
     }
 }
 
-DEPLOYE = config('DEPLOYE')
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "deepakpatidar_db",
-        "USER": "deepakpatidar",
-        "PASSWORD": "deepakpatidar",
-        "HOST": "localhost",
+        "NAME": "verceldb",
+        "USER": "default",
+        "PASSWORD": "9bfEwNYkgGH7",
+        "HOST": "ep-shiny-scene-a4si12pv-pooler.us-east-1.aws.neon.tech",
         "PORT": "5432",
     }
 }
 
-if DEPLOYE == 'heroku':
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=config('DATABASE_URL')
-        )
-    }
 
 # SECURE_SSL_REDIRECT=True
 SESSION_COOKIE_SECURE=True
