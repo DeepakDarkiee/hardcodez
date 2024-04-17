@@ -5,4 +5,4 @@ Disallow: /about/
 Disallow: /contact/
 
 
-Sitemap: https://hardcodez.com/sitemap.xml
+Sitemap: https://deepakpatidar.com/sitemap.xml

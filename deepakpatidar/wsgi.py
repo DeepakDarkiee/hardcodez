@@ -1,5 +1,5 @@
 """
-WSGI config for hardcodez project.
+WSGI config for deepakpatidar project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -14,7 +14,7 @@ from decouple import config
 
 ENV = config('ENV')
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'hardcodez.settings.{ENV}')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'deepakpatidar.settings.{ENV}')
 
 application = get_wsgi_application()
 

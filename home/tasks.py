@@ -7,7 +7,7 @@ from home.models import Subscribe
 from home.utils import subscription_mail, contact_mail,post_mail
 
 from django.core.mail import send_mail
-from hardcodez import settings
+from deepakpatidar import settings
 
 
 app = Celery()

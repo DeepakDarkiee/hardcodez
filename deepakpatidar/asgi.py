@@ -1,5 +1,5 @@
 """
-ASGI config for hardcodez project.
+ASGI config for deepakpatidar project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -14,6 +14,6 @@ from decouple import config
 
 ENV = config('ENV')
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'hardcodez.settings{ENV}')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'deepakpatidar.settings{ENV}')
 
 application = get_asgi_application()
