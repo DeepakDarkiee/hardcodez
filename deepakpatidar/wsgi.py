@@ -18,3 +18,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'deepakpatidar.settings.{ENV}')
 
 application = get_wsgi_application()
 
+app = application
