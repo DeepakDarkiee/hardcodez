@@ -8,14 +8,14 @@ ALLOWED_HOSTS = ["www.deepakpatidar.in", "deepakpatidar.in","*"]
 import dj_database_url
 
 
-CACHE_MIDDLEWARE_ALIAS = "default"  # which cache alias to use
-CACHE_MIDDLEWARE_SECONDS = 60   # number of seconds to cache a page for (TTL)
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
-        "LOCATION": "deepakpatidar_cache",
-    }
-}
+# CACHE_MIDDLEWARE_ALIAS = "default"  # which cache alias to use
+# CACHE_MIDDLEWARE_SECONDS = 60   # number of seconds to cache a page for (TTL)
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+#         "LOCATION": "deepakpatidar_cache",
+#     }
+# }
 
 DATABASES = {
     "default": {
