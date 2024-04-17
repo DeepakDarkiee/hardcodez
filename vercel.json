@@ -3,14 +3,14 @@
     "builds": [
       {
         "src": "deepakpatidar/wsgi.py",
-        "use": "@ardnt/vercel-python-wsgi",
-        "config": { "maxLambdaSize": "15mb" }
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
       {
-        "src": "build_files.sh",
+        "src": "build.sh",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "ui/staticfiles"
+          "distDir": "staticfiles_build"
         }
       }
     ],
@@ -23,6 +23,5 @@
         "src": "/(.*)",
         "dest": "deepakpatidar/wsgi.py"
       }
-    ],
-    "outputDirectory": "ui/staticfiles"
+    ]
   }
