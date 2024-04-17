@@ -49,7 +49,7 @@ DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / 'Data_backup'}
 DBBACKUP_POSTGRES_EXTENSION = 'psql'
 
 CRONJOBS = [
-    ('* */23 * * *', 'hardcodez.cron.db_back')
+    ('* */23 * * *', 'deepakpatidar.cron.db_back')
 ]
 
 ######################################################
@@ -70,7 +70,7 @@ MIDDLEWARE = [
 ]
 
 
-WSGI_APPLICATION = "hardcodez.wsgi.application"
+WSGI_APPLICATION = "deepakpatidar.wsgi.application"
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
@@ -208,9 +208,9 @@ CELERY_REDIRECT_STDOUTS_LEVEL = False
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "HardCodez",
+    "site_title": "Deepak Patidar",
     # Title on the brand, and login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "HardCodez",
+    "site_header": "Deepak Patidar",
     # Logo to use for your site, must be present in static files, used for brand on top left
     "site_logo": "logo/db logo.svg",
     # CSS classes that are applied to the logo above
@@ -218,9 +218,9 @@ JAZZMIN_SETTINGS = {
     # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
     "site_icon": None,
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the HardCodez",
+    "welcome_sign": "Welcome to the Deepak Patidar",
     # Copyright on the footer
-    "copyright": "www.hardcodez.com",
+    "copyright": "www.deepakpatidar.com",
     # The model admin to search from the search bar, search bar omitted if excluded
     "search_model": "blog.post",
     # Field name on user model that contains avatar image
@@ -336,4 +336,4 @@ JAZZMIN_UI_TWEAKS = {
     },
 }
 
-ROOT_URLCONF = "hardcodez.urls"
+ROOT_URLCONF = "deepakpatidar.urls"

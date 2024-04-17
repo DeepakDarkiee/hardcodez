@@ -66,7 +66,7 @@ nav,
 section,
 summary {
   display: block;
-  color: #3776ab;
+  color: #000000;
 }
 
 
@@ -741,7 +741,7 @@ body {
   Helvetica,
   Arial,
   sans-serif; */
-  color: #3776ab;
+  color: #000000;
 }
 
 
@@ -763,7 +763,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
-  color: #3776ab;
+  color: #000000;
 }
 
 h1 {
@@ -840,7 +840,7 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 a {
-  color: #3776ab;
+  color: #000000;
 }
 
 a:hover {
@@ -1479,7 +1479,7 @@ p {
   margin-bottom: .5rem;
   font-weight: 500;
   text-align: center;
-  color: #0C4B33;
+  color: #2b5b84;
 }
 
 .content .post-summary .post-title a {
@@ -1552,7 +1552,7 @@ p {
 
 .content .post-share a:hover,
 .content .post-share a:active {
-  background-color: #0C4B33;
+  background-color: #2b5b84;
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
@@ -1614,7 +1614,7 @@ hr.dashed {
 
 .social a:hover,
 .social a:active {
-  background-color: #0C4B33;
+  background-color: #2b5b84;
 }
 
 .sidebar .widget.subscribe form {
@@ -1635,7 +1635,7 @@ blockquote ul:last-child {
 }
 
 .tag {
-  background-color: #3776ab;
+  background-color: #000000;
   padding: 4px 8px;
   color: #fff;
   font-size: 1.4rem;
@@ -1893,7 +1893,7 @@ pre code {
 }
 
 .post .card.subscribe {
-  background-color: #0C4B33;
+  background-color: #2b5b84;
 }
 
 .post .card.subscribe form {
@@ -2259,11 +2259,11 @@ Carbonads
 
 #seriesSideBar ul li a:hover,
 #seriesSideBar ul li a:active {
-  color: #3776ab;
+  color: #000000;
 }
 
 #seriesSideBar ul li a.active {
-  color: #3776ab;
+  color: #000000;
 }
 
 
@@ -2292,8 +2292,8 @@ nav.platform a.active {
 }
 
 nav.platform a.series-nav {
-  border-color: #3776ab;
-  color: #3776ab;
+  border-color: #000000;
+  color: #000000;
 }
 
 body article div.platform-mac,
@@ -2377,7 +2377,7 @@ body.platform-linux article span.platform-linux {
 
 .code-view .code-preview {
   padding: 1rem 1.5rem;
-  border: 1px solid #3776ab;
+  border: 1px solid #000000;
   border-radius: 4px;
 }
 

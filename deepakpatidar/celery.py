@@ -8,13 +8,13 @@ ENV = config('ENV')
 
 # set the default Django settings module for the 'celery' program.
 # this is also used in manage.py
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'hardcodez.settings.{ENV}')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'deepakpatidar.settings.{ENV}')
 
 
 ## Get the base REDIS URL, default to redis' default
 BASE_REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')
 
-app = Celery('hardcodez')
+app = Celery('deepakpatidar')
 
 # Using a string here means the worker don't have to serialize
 # the configuration object to child processes.

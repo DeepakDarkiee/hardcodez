@@ -32,16 +32,16 @@ Articles
                   
                      {% if page_obj.has_previous %}
                      <li>
-                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#3776ab;">Previous</a></span>
+                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#000000;">Previous</a></span>
                      </li>
                      {% endif %}
                      <li>
                         
-                        <span class="page_number"><a style="color:#3776ab;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
+                        <span class="page_number"><a style="color:#000000;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
                       </li>
                      {% if page_obj.has_next %}
                      <li>
-                        <span class="page_number"><a style="color:#3776ab;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
+                        <span class="page_number"><a style="color:#000000;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
                      </li>
                      {% endif %}
                      

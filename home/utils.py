@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from hardcodez import settings
+from deepakpatidar import settings
 from mailchimp_marketing import Client
 from mailchimp_marketing.api_client import ApiClientError
 from django_mail_template.models import Configuration

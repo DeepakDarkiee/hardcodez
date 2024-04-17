@@ -4,7 +4,7 @@ DEBUG = False
 
 from decouple import config
 
-ALLOWED_HOSTS = ["www.hardcodez.com", "hardcodez.com","*"]
+ALLOWED_HOSTS = ["www.deepakpatidar.in", "deepakpatidar.in","*"]
 import dj_database_url
 
 
@@ -13,7 +13,7 @@ CACHE_MIDDLEWARE_SECONDS = 60   # number of seconds to cache a page for (TTL)
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.db.DatabaseCache",
-        "LOCATION": "hardcodez_cache",
+        "LOCATION": "deepakpatidar_cache",
     }
 }
 
@@ -21,9 +21,9 @@ DEPLOYE = config('DEPLOYE')
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "hardcodez_db",
-        "USER": "hardcodez",
-        "PASSWORD": "hardcodez",
+        "NAME": "deepakpatidar_db",
+        "USER": "deepakpatidar",
+        "PASSWORD": "deepakpatidar",
         "HOST": "localhost",
         "PORT": "5432",
     }

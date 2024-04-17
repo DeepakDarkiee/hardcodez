@@ -12,12 +12,12 @@
 
 <div class="container masthead">
 {% comment %} <a href="/"><img class="img" src="/static/logo/db logo.svg" alt="" title="" />    {% endcomment %}
-<h1 itemprop="name" content="hardcodez">
+<h1 itemprop="name" content="deepakpatidar">
   <a href="/" class="logo">
-    <span style="color: #3776ab">HardCodez</span>
+    <span style="color: #000000">Deepak Patidar</span>
   </a>
 </h1>
-<h2 class="jumbotron-heading"><span id="typed" style="color: #3776ab"></span></h2>
+<h2 class="jumbotron-heading"><span id="typed" style="color: #000000"></span></h2>
 
 </div>
 <style>
@@ -37,10 +37,10 @@
          <div class="eight columns content">
             <div class="card post-summary" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-                  <meta itemprop="name" content="hardcodez" />
-                  <meta itemprop="url" content="https://hardcodez.com" />
+                  <meta itemprop="name" content="deepakpatidar" />
+                  <meta itemprop="url" content="https://deepakpatidar.com" />
                   <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-                     <meta itemprop="url" content="https://www.hardcodez.com/img/gplus_logo.png" />
+                     <meta itemprop="url" content="https://www.deepakpatidar.com/img/gplus_logo.png" />
                      <meta itemprop="height" content="60" />
                      <meta itemprop="width" content="600" />
                   </div>
@@ -52,7 +52,7 @@
                <h3 class="post-title">
                   <a href="/{{post.slug}}"
                      itemprop="url mainEntityOfPage">
-                  <span itemprop="headline name">{{post.title}}</span>
+                  <span itemprop="headline name"> <b>{{post.title}} </b> </span>
                   </a>
                </h3>
                <ul class="post-meta">
@@ -112,7 +112,7 @@
                            rel="nofollow" target="_blank" title="Share on Facebook">
                         <i class="fa fa-facebook"></i>
                         </a>
-                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://sibt.co/3hpOigV&amp;title={{post.slug}}&amp;source=https://www.hardcodez.com"
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://sibt.co/3hpOigV&amp;title={{post.slug}}&amp;source=https://www.deepakpatidar.com"
                            rel="nofollow" target="_blank" title="Share on LinkedIn">
                         <i class="fa fa-linkedin"></i>
                         </a>
@@ -129,16 +129,16 @@
                   
                      {% if page_obj.has_previous %}
                      <li>
-                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#3776ab;">Previous</a></span>
+                        <span class="page_number"><a href="?page={{ page_obj.previous_page_number }}" style="color:#000000;">Previous</a></span>
                      </li>
                      {% endif %}
                      <li>
                         
-                        <span class="page_number"><a style="color:#3776ab;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
+                        <span class="page_number"><a style="color:#000000;">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a></span>
                       </li>
                      {% if page_obj.has_next %}
                      <li>
-                        <span class="page_number"><a style="color:   #3776ab;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
+                        <span class="page_number"><a style="color:   #000000;" href="?page={{ page_obj.next_page_number }}">Next</a></span>
                      </li>
                      {% endif %}
                   {% endif %}  
@@ -157,7 +157,7 @@
     window.onload = function () {
         console.log("loaded")
         var typed = new Typed('#typed', {
-            strings: ["Welcome to Hardcodez ", "Stories about", "Python", "Django", "Poetry", "Docker","Apache HTTP Server","", "  Web Development :)"],
+            strings: ["Welcome to My Articles ", "Stories about", "Python", "Django", "AWS", "Docker","Apache HTTP Server","", "  Web Development :)"],
             backSpeed: 15,
             smartBackspace: true,
             backDelay: 1200,

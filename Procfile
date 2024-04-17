@@ -1,2 +1,2 @@
-web: gunicorn hardcodez.wsgi --log-file -
-worker: celery -A hardcodez worker -B --loglevel=info
+web: gunicorn deepakpatidar.wsgi --log-file -
+worker: celery -A deepakpatidar worker -B --loglevel=info
